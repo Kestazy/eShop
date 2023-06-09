@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card';
 
 const OneProduct = () => {
     return (
-        <div className='d-flex flex-wrap justify-content-start'>
+        <div className='d-flex flex-wrap justify-content-center mt-4'>
             { data.map((oneProduct, index) => (
                 <Card key={index} style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={oneProduct.imageUrl} />

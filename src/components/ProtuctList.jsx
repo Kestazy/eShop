@@ -1,11 +1,27 @@
-import React from 'react'
-import OneProduct from './OneProduct'
+import React from 'react';
+import OneProduct from './OneProduct';
+import About from './About';
+import Cart from './Cart';
+import MyHeader from './MyHeader';
+
+
+import {
+BrowserRouter as Router,
+Routes,
+Route,
+
+} from "react-router-dom";
 
 const ProtuctList = () => {
   return (
-    <div>
-        <OneProduct />
-    </div>
+    <Router>
+        <MyHeader/>
+        <Routes>
+            <Route path='/' element={<About/>} />
+            <Route path='/products' element={<OneProduct/>} />
+            <Route path='/cart' element={<Cart/>} />
+        </Routes>
+    </Router>
   )
 }
 

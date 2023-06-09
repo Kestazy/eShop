@@ -1,11 +1,10 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 import data from '../data/products'
-import OneProduct from './OneProduct';
 
 const About = () => {
     return (
-        <div>
+        <div className='mt-4'>
             <Carousel>
                 { data.map((oneProduct, index) => (
                     <Carousel.Item key={index} interval={5000}>
