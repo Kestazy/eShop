@@ -3,7 +3,7 @@ import data from "../data/products";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-const OneProduct = () => {
+const OneProduct = ({addToCart}) => {
     return (
         <div className='d-flex flex-wrap justify-content-center mt-4'>
             { data.map((oneProduct, index) => (
@@ -13,7 +13,7 @@ const OneProduct = () => {
                     <Card.Title>{oneProduct.name}</Card.Title>
                     <Card.Text>{oneProduct.description}</Card.Text>
                     <Card.Text>{oneProduct.price}</Card.Text>
-                    <Button variant="primary">Add to cart</Button>
+                    <Button onClick={() => addToCart(oneProduct)} variant="primary">Buy</Button>
                 </Card.Body>
             </Card> 
             ))   
